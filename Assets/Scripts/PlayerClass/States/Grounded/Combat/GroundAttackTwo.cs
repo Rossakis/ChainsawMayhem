@@ -1,0 +1,55 @@
+using System.Collections;
+using UnityEngine;
+
+namespace ChainsawMan.PlayerClass.States.Grounded
+{
+    public class GroundAttackTwo : GroundAttack
+    {
+        private void Awake()
+        {
+            attackHash = Animator.StringToHash(attackAnimation.name);
+        }
+        
+        public override void EnterState(PlayerController player)
+        {
+            NumberOfAttacks = 2;
+            lastAttackTime = Time.time;
+            player.animator.Play(attackHash);
+            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackTwo);
+
+        }
+
+        public override void UpdateLogic(PlayerController player)
+        {
+            base.UpdateLogic(player);
+
+            if (InputManager.instance.GetAttack() && NumberOfAttacks == 2 && player.animator.GetCurrentAnimatorStateInfo(0) .normalizedTime >= attackWindowTime)
+            {
+                NumberOfAttacks = 3;
+            }
+
+            if (NumberOfAttacks == 3 && player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
+            {
+                player.ChangeState(player.GroundAttackThree);
+            }
+            
+            //if player doesn't attack again fast enough and the animations ends, go back to Idle
+            if(Time.time - lastAttackTime > maxNonAttackingTime && player.animator.GetCurrentAnimatorStateInfo(0) .normalizedTime >= 1)
+            {
+                NumberOfAttacks = 0;
+                player.ChangeState(player.Idle);
+            }
+        }
+        
+        
+        private void OnTriggerEnter2D(Collider2D other)
+        {
+            if (other.CompareTag("Enemy") &&  player.GetCurrentState() == player.GroundAttackTwo)
+            {
+                other.GetComponent<IDamage>().ApplyDamage(damage);
+                other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange);
+
+            }
+        }
+    }
+}
