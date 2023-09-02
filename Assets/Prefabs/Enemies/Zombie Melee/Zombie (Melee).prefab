@@ -232,8 +232,8 @@ MonoBehaviour:
   flinchTime: 0.2
   maxFlinchAmountOfTimes: 2
   flinchResetTime: 10
-  grabDamageInterval: 0.2
-  grabDamage: 5
+  grabDamageInterval: 0.5
+  grabDamage: 15
   grabChanceInterval: 5
   chanceOfGrabbing: 30
   idleAnimation: {fileID: 7400000, guid: 60a362fd2700745a0bc98f073ee7b2f6, type: 2}

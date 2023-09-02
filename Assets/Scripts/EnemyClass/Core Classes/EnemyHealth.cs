@@ -29,7 +29,7 @@ namespace ChainsawMan
             
             //ParticleEffectsManager.Instance.Play(ParticleEffectsManager.ParticleNames.BloodSplatter, transform);
             AnimatedEffectsManager.Instance.Play(AnimatedEffectsManager.Effects.BloodSplatter, transform.position);
-            SoundManager.Instance.PlayEnemyHit(transform);
+            SoundManager.Instance.EnemySound(gameObject, SoundManager.EnemySounds.EnemyHit);
             ShowDamage();
         }
         

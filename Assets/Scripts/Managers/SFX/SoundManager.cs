@@ -8,9 +8,7 @@ namespace ChainsawMan
     public class SoundManager : MonoBehaviour
     {
         public static SoundManager Instance { get; private set; }
-
-        public Dictionary<AudioClip, string> soundLibrary = new Dictionary<AudioClip, string>();
-
+        
         [SerializeField] private AudioClip playerAttackOne;
         [SerializeField] private AudioClip playerAttackTwo;
         [SerializeField] private AudioClip playerAttackThree;
@@ -19,8 +17,11 @@ namespace ChainsawMan
         [SerializeField] private AudioClip playerRegeneration;
 
 
+        [SerializeField] private AudioClip enemyPunch;
+        [SerializeField] private AudioClip enemyKnifeHit;
+        [SerializeField] private AudioClip enemyHit;
+        [SerializeField] private AudioClip enemyMunching;
 
-        public AudioClip enemyHit;
         private AudioSource audioSource;
 
         public enum PlayerSounds
@@ -36,10 +37,10 @@ namespace ChainsawMan
         
         public enum EnemySounds
         {
-            EnemyAttackOne,
-            EnemyAttackTwo,
-            EnemyAttackThree,
+            EnemyPunch,
+            EnemyKnifeHit,
             EnemyHit,
+            EnemyMunching,
             EnemyDeath
         }
 
@@ -76,10 +77,25 @@ namespace ChainsawMan
             }
         }
         
-        public void PlayEnemyHit(Transform enemy)
+        public void EnemySound(GameObject enemy, EnemySounds sound)
         {
-            enemy.gameObject.GetComponent<AudioSource>().PlayOneShot(enemyHit);//create audio source at run time
+            var enemyAudio = enemy.gameObject.GetComponent<AudioSource>();//access the enemy's audio component
             
+            switch (sound)
+            {
+                case EnemySounds.EnemyPunch:
+                    enemyAudio.PlayOneShot(enemyPunch);
+                    break;
+                case EnemySounds.EnemyKnifeHit:
+                    enemyAudio.PlayOneShot(enemyKnifeHit);
+                    break;
+                case EnemySounds.EnemyHit:
+                    enemyAudio.PlayOneShot(enemyHit);
+                    break;
+                case EnemySounds.EnemyMunching:
+                    enemyAudio.PlayOneShot(enemyMunching);
+                    break;
+            }
         }
         
     }

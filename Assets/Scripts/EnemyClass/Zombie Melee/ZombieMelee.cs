@@ -39,6 +39,8 @@ namespace ChainsawMan
         
         [Tooltip("How much chance (out of 100%) is there for the grab action to be performed by the zombie")]
         [SerializeField] private float chanceOfGrabbing;//how much chance
+        private bool startedGrabDamaging;//do this check so that enemy doesn't repeatedly attack the player
+
         
         //Animation referencing
         [SerializeField] private AnimationClip idleAnimation; 
@@ -75,8 +77,6 @@ namespace ChainsawMan
         private float grabChanceRandomiser;
         //Temp fields
         private float initialMoveSpeed;//a temporary filed that will store the enemy's initial moveSpeed (which will later be change by grabSpeedBoost), to later restore moveSpeed to the default
-        
-
 
         private void Awake()
         {
@@ -130,6 +130,9 @@ namespace ChainsawMan
                 lastGrabTime = Time.time;
                 lastAttackTime = Time.time;
             }
+
+            // if (grabbedPlayer)
+            //     currentState = States.Grab;
 
             //KnockUp state condition
             if (!enemyBehaviour.IsGrounded() && enemyBehaviour.rb.velocity.y >= 0f) 
@@ -297,7 +300,7 @@ namespace ChainsawMan
         
         void Grab()
         {
-            if (player.GetCurrentState() == player.GrabbedByZombie)
+            if (player.GetCurrentState() == player.GrabbedByZombie && !grabbedPlayer)//if player is already grabbed by someone other, just attack him
                 currentState = States.Attack;
             
             animator.Play(grabHash);//the grab animation has a trigger on it that enables the OnTriggerEnter2D method, to change the player state to GrabbedState
@@ -329,7 +332,6 @@ namespace ChainsawMan
             animator.Play(deathHash);//death animation
             enemyBehaviour.DropItems();//make enemy drop items (if successful)
             Destroy(gameObject, 1.5f);
-
         }
 
         public override States GetCurrentState()
@@ -340,14 +342,16 @@ namespace ChainsawMan
         private IEnumerator GrabDamage()
         {
             yield return new WaitForSeconds(grabDamageInterval);
+            
             player.GetComponent<IDamage>().ApplyDamage(grabDamage);
+            startedGrabDamaging = false;//can damage again after this coroutine ends
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.CompareTag("Player"))
             {
-                if(currentState == States.Attack)
+                if (currentState == States.Attack)
                     other.GetComponentInParent<IDamage>().ApplyDamage(damage);
                 else if (currentState == States.Grab && !grabbedPlayer)//if enemy's state is grab, 
                 {
@@ -364,9 +368,13 @@ namespace ChainsawMan
             if (other.CompareTag("Player"))
             {
                 enemyBehaviour.ChasePlayer();//make enemy chase the player whilst he's invisible, to show up again
-                
-                if (player.GetCurrentState() == player.GrabbedByZombie)//if player is grabbed currently, apply damage to him
+
+                if (player.GetCurrentState() == player.GrabbedByZombie && !startedGrabDamaging) //if player is grabbed currently and grab damage wasn't done already, damage him
+                {
+                    startedGrabDamaging = true;
+                    SoundManager.Instance.EnemySound(gameObject, SoundManager.EnemySounds.EnemyMunching);
                     StartCoroutine(GrabDamage());
+                }
             }
         }
     }
