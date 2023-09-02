@@ -27,7 +27,8 @@ namespace ChainsawMan
                 hasTakenDamage = true;
             }
             
-            ParticleManager.Instance.Play(ParticleManager.ParticleNames.BloodSplatter, transform);
+            //ParticleEffectsManager.Instance.Play(ParticleEffectsManager.ParticleNames.BloodSplatter, transform);
+            AnimatedEffectsManager.Instance.Play(AnimatedEffectsManager.Effects.BloodSplatter, transform.position);
             SoundManager.Instance.PlayEnemyHit(transform);
             ShowDamage();
         }

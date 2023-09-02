@@ -30,6 +30,10 @@ namespace ChainsawMan.PlayerClass
         {
             if (instance == null)
                 instance = this;
+            else
+            {
+                Destroy(this);
+            }
 
             PlayerInput = GetComponent<PlayerInput>();
         }

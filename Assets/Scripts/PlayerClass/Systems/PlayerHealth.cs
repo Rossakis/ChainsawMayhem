@@ -56,7 +56,8 @@ namespace ChainsawMan
             }
 
             SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerRegeneration);
-            ParticleManager.Instance.Play(ParticleManager.ParticleNames.PlayerHeal, transform);
+            //ParticleEffectsManager.Instance.Play(ParticleEffectsManager.ParticleNames.PlayerHeal, transform);
+            AnimatedEffectsManager.Instance.Play(AnimatedEffectsManager.Effects.Heal, transform.position);
             ShowRegeneration();
         }
         

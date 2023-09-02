@@ -5,9 +5,9 @@ using UnityEngine;
 
 namespace ChainsawMan
 {
-    public class ParticleManager : MonoBehaviour
+    public class ParticleEffectsManager : MonoBehaviour
     {
-        public static ParticleManager Instance { get; private set; }
+        public static ParticleEffectsManager Instance { get; private set; }
         
         [SerializeField] private ParticleSystem bloodSplatter;
         [SerializeField] private ParticleSystem playerHeal;
@@ -22,6 +22,10 @@ namespace ChainsawMan
         {
             if (Instance == null)
                 Instance = this;
+            else
+            {
+                Destroy(this);
+            }
         }
 
         public void Play(ParticleNames particleName, Transform transform)
