@@ -1,11 +1,12 @@
 using ChainsawMan.PlayerClass;
+using ChainsawMan.PlayerClass.States;
 using ChainsawMan.PlayerClass.States.Grounded;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace ChainsawMan
 {
-    public class GrabbedByZombie : GroundedState
+    public class GrabbedByZombie : BaseState
     {
         [SerializeField] private AnimationClip grabbedAnimation;
         [SerializeField] private AnimationClip releaseAnimation;

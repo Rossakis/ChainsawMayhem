@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 namespace ChainsawMan.PlayerClass.States.Grounded

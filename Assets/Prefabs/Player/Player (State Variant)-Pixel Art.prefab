@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &493782148430008273
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8370459691482052685}
+  m_Layer: 0
+  m_Name: Interactions
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8370459691482052685
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493782148430008273}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635836765739919425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1461296954624134026
 GameObject:
   m_ObjectHideFlags: 0
@@ -122,7 +153,10 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3812019052611112166}
+  - {fileID: 1714310430836815866}
+  - {fileID: 8370459691482052685}
   m_Father: {fileID: 4086499135452986311}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4939523727008074160
@@ -213,7 +247,6 @@ MonoBehaviour:
   knockBackRange: 300
   damage: 20
   attackAnimation: {fileID: 7400000, guid: 99260857ac601490694f5cb19ad68829, type: 2}
-  audioClip: {fileID: 8300000, guid: 4d4ef7516a431934681038a3dc391e55, type: 3}
 --- !u!114 &7668813038927649269
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -231,7 +264,6 @@ MonoBehaviour:
   knockBackRange: 300
   damage: 20
   attackAnimation: {fileID: 7400000, guid: a76cc0606922d4ff28edf615c8ae1f43, type: 2}
-  audioClip: {fileID: 8300000, guid: 482611fe6bc559142a00be6e726b4862, type: 3}
 --- !u!114 &7708895045902272775
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -249,7 +281,6 @@ MonoBehaviour:
   knockBackRange: 450
   damage: 35
   attackAnimation: {fileID: 7400000, guid: f649e857834a8476e8961609f0c9888a, type: 2}
-  audioClip: {fileID: 8300000, guid: a65d792d6907f744490c9b15bb70edfe, type: 3}
 --- !u!114 &4332473907178473070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +298,6 @@ MonoBehaviour:
   knockBackRange: 0
   damage: 20
   attackAnimation: {fileID: 7400000, guid: 0d278f66243554fa1a62f4a913d7ee25, type: 2}
-  audioClip: {fileID: 0}
   preparationAnimation: {fileID: 7400000, guid: 8ddbfbb1ae4f044a9b86ff47ab8ad624,
     type: 2}
   maxKnockUpHeight: 1250
@@ -291,7 +321,6 @@ MonoBehaviour:
   knockBackRange: 0
   damage: 15
   attackAnimation: {fileID: 7400000, guid: 07dd509e918944d8c996967452806f5c, type: 2}
-  audioClip: {fileID: 0}
   moveSpeed: 6
 --- !u!114 &17232472874674248
 MonoBehaviour:
@@ -310,7 +339,6 @@ MonoBehaviour:
   knockBackRange: 0
   damage: 5
   attackAnimation: {fileID: 7400000, guid: 5766ed969bfe74ea4aab29ee13c986d2, type: 2}
-  audioClip: {fileID: 0}
   moveSpeed: 3
 --- !u!114 &7453227503112746693
 MonoBehaviour:
@@ -538,6 +566,37 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   showRayGizmo: 1
+--- !u!1 &4006980103643427910
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1714310430836815866}
+  m_Layer: 0
+  m_Name: Airborne
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1714310430836815866
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4006980103643427910}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635836765739919425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4086499135452986363
 GameObject:
   m_ObjectHideFlags: 0
@@ -915,6 +974,66 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.5, y: 2.5}
   m_EdgeRadius: 0
+--- !u!1 &7918634914703947987
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3812019052611112166}
+  - component: {fileID: 5980780527154148393}
+  - component: {fileID: 3838291539055575559}
+  m_Layer: 0
+  m_Name: Grounded
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3812019052611112166
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918634914703947987}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1635836765739919425}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5980780527154148393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918634914703947987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e8ccff9378914073a982b6d7bc3b8ecc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  idle: {fileID: 7400000, guid: aa0bdc44fcfd34fc0a3b5cb21ca6fa5b, type: 2}
+--- !u!114 &3838291539055575559
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7918634914703947987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d80fda51a6524da598f24fc123a35f4a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 10
+  walking: {fileID: 7400000, guid: 489875a9513ad4976b8ef4dfa9f83b82, type: 2}
 --- !u!1 &8010077053179898453
 GameObject:
   m_ObjectHideFlags: 0
