@@ -1,18 +1,17 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 namespace ChainsawMan.PlayerClass.States
 {
     public class DeathState : BaseState
     {
-        [SerializeField] private List<GameObject> objectsToDeactivate;//list of objects that will be deactivated when player dies
+        //[SerializeField] private List<GameObject> objectsToDeactivate;//list of objects that will be deactivated when player dies
         
         //Animation referencing and name hashing
         [SerializeField] private AnimationClip deathAnimation;//show this when secondChance is not at work
         [SerializeField] private AnimationClip reviveAnimation;
-        private int dashHash;
+        private int deathHash;
         private int reviveHash;
         
         [SerializeField] private GameObject DeathMenu ;//the UI screen that shows up when player dies
@@ -35,7 +34,7 @@ namespace ChainsawMan.PlayerClass.States
         {
             DeathMenu.SetActive(false);
 
-            dashHash = Animator.StringToHash(deathAnimation.name);
+            deathHash = Animator.StringToHash(deathAnimation.name);
             reviveHash = Animator.StringToHash(reviveAnimation.name);
         }
         

@@ -4252,6 +4252,31 @@ PrefabInstance:
       propertyPath: quickTimeEventObject
       value: 
       objectReference: {fileID: 1929241575}
+    - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: grabMeterBar
+      value: 
+      objectReference: {fileID: 1171088409}
+    - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: grabMeterLine
+      value: 
+      objectReference: {fileID: 1833926189}
+    - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: quickTimeEventObject
+      value: 
+      objectReference: {fileID: 1929241575}
+    - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: knockUpMeterBar
+      value: 
+      objectReference: {fileID: 483665998}
+    - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: knockUpMeterLine
+      value: 
+      objectReference: {fileID: 656035673}
     - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: m_LocalPosition.x

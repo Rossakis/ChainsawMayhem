@@ -75,6 +75,8 @@ namespace ChainsawMan.PlayerClass
         //In order for different States (Grounded, Airborne, etc...) to see if player has jumped, we make it public through the PlayerController class
         public bool hasJumped;
 
+        public Collider2D col;
+
         private void Awake()
         {
             //Movement Components
