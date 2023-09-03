@@ -3721,41 +3721,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 17232472874674248, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: damage
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 991169190404028280, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: grabMeterBar
-      value: 
-      objectReference: {fileID: 1171088409}
-    - target: {fileID: 991169190404028280, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: grabMeterLine
-      value: 
-      objectReference: {fileID: 1833926189}
-    - target: {fileID: 991169190404028280, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: quickTimeEventObject
-      value: 
-      objectReference: {fileID: 1929241575}
-    - target: {fileID: 1001147555512816710, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1525880238244318577, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: grabMeterBar
@@ -3771,11 +3736,6 @@ PrefabInstance:
       propertyPath: quickTimeEventObject
       value: 
       objectReference: {fileID: 1929241575}
-    - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: knockUpMeterBar
@@ -3786,11 +3746,6 @@ PrefabInstance:
       propertyPath: knockUpMeterLine
       value: 
       objectReference: {fileID: 656035673}
-    - target: {fileID: 3838291539055575559, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3846,56 +3801,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 4262009686599729842, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4332473907178473070, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: knockUpMeterBar
-      value: 
-      objectReference: {fileID: 483665998}
-    - target: {fileID: 4332473907178473070, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: knockUpMeterLine
-      value: 
-      objectReference: {fileID: 656035673}
-    - target: {fileID: 4595555730683876825, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4813596017289463836, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5507959722666435920, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5980780527154148393, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6214607620734656765, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: DeathMenu
       value: 
       objectReference: {fileID: 2079151750}
-    - target: {fileID: 6214607620734656765, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6600147901022615494, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6676685007984708084, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: m_Camera
@@ -3906,31 +3816,6 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1148046997}
-    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7453227503112746693, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: damage
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 7484201702324966146, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8915036250698566432, guid: 2ff63c0ce87854071a4fda07288f1ef2,
-        type: 3}
-      propertyPath: isUnlocked
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
