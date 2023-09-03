@@ -747,6 +747,74 @@ PolygonCollider2D:
       - {x: 0.4378728, y: -3.2057638}
       - {x: 0.37284443, y: 0.8226058}
   m_UseDelaunayMesh: 0
+--- !u!1001 &365270441
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -26.46645
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.060008
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.02166884
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 500045389868174255, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6917943720587380417, guid: fa94db2f3f6bb4e1daa276741ead8b3a,
+        type: 3}
+      propertyPath: m_Name
+      value: Zombie (Melee)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: fa94db2f3f6bb4e1daa276741ead8b3a, type: 3}
 --- !u!1 &386419429
 GameObject:
   m_ObjectHideFlags: 0
@@ -3571,8 +3639,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.0789, y: 11.13385, z: 0}
-    m_Extent: {x: 1.9935, y: 6.58165, z: 0}
+    m_Center: {x: -9.07745, y: 11.1325, z: 0}
+    m_Extent: {x: 1.9936502, y: 6.5807, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4229,8 +4297,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.0775, y: 11.1344, z: 0}
-    m_Extent: {x: 1.9964001, y: 6.5834, z: 0}
+    m_Center: {x: -9.0717, y: 11.131399, z: 0}
+    m_Extent: {x: 1.9967003, y: 6.5764995, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4344,8 +4412,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.12155, y: 10.344049, z: 0}
-    m_Extent: {x: 1.9910502, y: 5.78935, z: 0}
+    m_Center: {x: -9.134251, y: 10.34695, z: 0}
+    m_Extent: {x: 1.9923501, y: 5.78625, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4395,8 +4463,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.0374, y: 10.29175, z: 0}
-    m_Extent: {x: 2.0795002, y: 5.78895, z: 0}
+    m_Center: {x: -9.03625, y: 10.2908, z: 0}
+    m_Extent: {x: 2.0882502, y: 5.7882996, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4466,8 +4534,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.07555, y: 11.1357, z: 0}
-    m_Extent: {x: 1.99945, y: 6.574, z: 0}
+    m_Center: {x: -9.072849, y: 11.1388, z: 0}
+    m_Extent: {x: 2.0005498, y: 6.5753994, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4561,3 +4629,4 @@ SceneRoots:
   - {fileID: 429986166555114713}
   - {fileID: 5302149019385944938}
   - {fileID: 1200859508815990278}
+  - {fileID: 365270441}

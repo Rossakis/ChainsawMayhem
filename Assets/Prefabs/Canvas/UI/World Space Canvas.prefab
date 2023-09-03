@@ -32,6 +32,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5115559345249309479}
+  - {fileID: 258311968124194479}
   m_Father: {fileID: 3931403642679114612}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -92,6 +93,8 @@ MonoBehaviour:
   targetToFollow: {fileID: 0}
   offsetY: 8
   offsetX: 0
+  maxYCameraDistance: 0.75
+  minYCameraDistance: 0.6
 --- !u!1 &4765518995467052939
 GameObject:
   m_ObjectHideFlags: 0
@@ -125,7 +128,6 @@ RectTransform:
   m_Children:
   - {fileID: 817887065156798866}
   - {fileID: 4199251927069124234}
-  - {fileID: 258311968124194479}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -288,6 +290,8 @@ MonoBehaviour:
   targetToFollow: {fileID: 0}
   offsetY: 2.5
   offsetX: 0
+  maxYCameraDistance: 0.5
+  minYCameraDistance: -0.5
 --- !u!1 &5618685925161443156
 GameObject:
   m_ObjectHideFlags: 0
@@ -317,11 +321,11 @@ Transform:
   m_GameObject: {fileID: 5618685925161443156}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -405, y: -228, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 0.50625}
+  m_LocalPosition: {x: 25.110046, y: -0.5952835, z: -1}
+  m_LocalScale: {x: 3, y: 3.75, z: 0.10000001}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 3931403642679114612}
+  m_Father: {fileID: 817887065156798866}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &5518654635402969951
 SpriteRenderer:
@@ -409,8 +413,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetToFollow: {fileID: 0}
-  offsetY: 5
+  offsetY: 8
   offsetX: 0
+  maxYCameraDistance: 0.6
+  minYCameraDistance: 0.4
 --- !u!114 &6059403438480575573
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -1,8 +1,5 @@
-using System;
 using System.Collections.Generic;
 using ChainsawMan.PlayerClass;
-using ChainsawMan.PlayerClass.States;
-using ChainsawMan.PlayerClass.States.Grounded;
 using UnityEngine;
 
 namespace ChainsawMan
