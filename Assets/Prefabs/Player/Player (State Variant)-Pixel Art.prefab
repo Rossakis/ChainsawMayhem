@@ -44,6 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8694944763260416ab014715121be27a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   grabbedAnimation: {fileID: 7400000, guid: 81a570feb903c4c4cb7cecc6f8147513, type: 2}
   releaseAnimation: {fileID: 7400000, guid: af8786dfc481749c5be793af84e8c4ce, type: 2}
   quickTimeEventObject: {fileID: 0}
@@ -176,6 +177,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8281c8a44b9048c9a2e3190f12fe6267, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   dashForce: 9000
   dashTimer: 1
   dash: {fileID: 7400000, guid: 20b463fc1cb6f4b0da950d4f43e554f2, type: 2}
@@ -191,6 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6dd9e4eb11b54832a04f809b40ee81d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   deathAnimation: {fileID: 7400000, guid: aa0bdc44fcfd34fc0a3b5cb21ca6fa5b, type: 2}
   reviveAnimation: {fileID: 7400000, guid: aa0bdc44fcfd34fc0a3b5cb21ca6fa5b, type: 2}
   DeathMenu: {fileID: 0}
@@ -332,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11c86a5c12d843c6b7f6ffe270878a54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   airMoveSpeed: 10
   jumpHeight: 2200
   jumping: {fileID: 7400000, guid: 6252b33ef8d2b47d69d57b802e6dcd0c, type: 2}
@@ -347,6 +351,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f2bec0f000d439cb7ee26b65cf2e4ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   airMoveSpeed: 10
   falling: {fileID: 7400000, guid: 6252b33ef8d2b47d69d57b802e6dcd0c, type: 2}
 --- !u!114 &5507959722666435920
@@ -361,6 +366,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fa4ee9ec298b4e788b9c1d82e8237a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   airMoveSpeed: 70
   maxNonAttackingTime: 0.5
   attackWindowTime: 0.25
@@ -380,6 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90c9976e94d80479aa221f913871a5c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   airMoveSpeed: 70
   maxNonAttackingTime: 0.5
   attackWindowTime: 0.25
@@ -399,6 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64c284a62c8d44852b3309f094084190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   airMoveSpeed: 70
   maxNonAttackingTime: 0.5
   attackWindowTime: 0.25
@@ -881,6 +889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8ccff9378914073a982b6d7bc3b8ecc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   idle: {fileID: 7400000, guid: aa0bdc44fcfd34fc0a3b5cb21ca6fa5b, type: 2}
 --- !u!114 &3838291539055575559
 MonoBehaviour:
@@ -894,6 +903,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d80fda51a6524da598f24fc123a35f4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   moveSpeed: 10
   walking: {fileID: 7400000, guid: 489875a9513ad4976b8ef4dfa9f83b82, type: 2}
 --- !u!114 &4813596017289463836
@@ -908,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc85b63f808647eb8ac7622fa96e92c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0
   knockBackRange: 300
@@ -925,6 +936,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35f4a24b75bd43bca68afb38ce1feba8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0
   knockBackRange: 300
@@ -942,6 +954,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45b1942b6e934714aaa266268ac18365, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0
   knockBackRange: 450
@@ -959,6 +972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f77a49b67edac46368a7b4bfbbe19e56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0
   knockBackRange: 0
@@ -982,6 +996,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc6bf5abb0df413194b46c26a468d460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0.6
   knockBackRange: 0
@@ -1000,6 +1015,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54d21e5aee394ebba6a264a38519d19a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isUnlocked: 1
   maxNonAttackingTime: 0.5
   attackWindowTime: 0.6
   knockBackRange: 0

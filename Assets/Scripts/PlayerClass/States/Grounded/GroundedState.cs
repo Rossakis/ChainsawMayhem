@@ -13,10 +13,8 @@ namespace ChainsawMan.PlayerClass.States.Grounded
         public override void UpdateLogic(PlayerController player)
         {
             //Death
-            if (player.PlayerHealth.IsDead)
-            {
+            if (player.PlayerHealth.IsDead) 
                 player.ChangeState(player.Dead);
-            }
 
             //Falling
             if (!player.characterController.IsGrounded && !player.characterController.CanCoyoteJump())//if player falls after coyote jump period has passed, has enough negative velocity and is not grounded, change to Falling State
@@ -37,8 +35,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
                 player.ChangeState(player.KnockUpAttack);
 
             //Dashing
-            if (InputManager.instance
-                .GetDash()) //the second condition is put there to avoid a bug which made the player unable to jump
+            if (InputManager.instance.GetDash()) //the second condition is put there to avoid a bug which made the player unable to jump
                 player.ChangeState(player.Dashing);
 
         }

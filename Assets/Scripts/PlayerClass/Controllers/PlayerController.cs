@@ -117,6 +117,11 @@ namespace ChainsawMan.PlayerClass
 
         public void ChangeState(BaseState newState)
         {
+            if (!newState.isUnlocked)//if the requested state/skill is not unlocked, don't change state
+            {
+                Debug.Log(newState + " is not unlocked");
+                return;
+            }
             _currentState.ExitState(this);
             _currentState = newState;
             _currentState.EnterState(this);

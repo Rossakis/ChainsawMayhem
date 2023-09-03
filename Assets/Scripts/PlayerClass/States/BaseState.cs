@@ -8,6 +8,11 @@ namespace ChainsawMan.PlayerClass.States
     public abstract class BaseState : MonoBehaviour
     {
         /// <summary>
+        /// Whether this skill is available for the player to use
+        /// </summary>
+        public bool isUnlocked;
+        
+        /// <summary>
         /// What will the state do when it activates (e.g. make the player duck when DuckState is active).
         /// </summary>
         /// <param name="player"></param>

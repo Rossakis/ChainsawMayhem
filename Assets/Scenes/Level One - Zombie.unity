@@ -3571,8 +3571,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.07785, y: 11.1395, z: 0}
-    m_Extent: {x: 1.99365, y: 6.5736003, z: 0}
+    m_Center: {x: -9.0789, y: 11.13385, z: 0}
+    m_Extent: {x: 1.9935, y: 6.58165, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -3741,6 +3741,21 @@ PrefabInstance:
       propertyPath: quickTimeEventObject
       value: 
       objectReference: {fileID: 1929241575}
+    - target: {fileID: 1001147555512816710, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1525880238244318577, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1633304565251617318, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: grabMeterBar
@@ -3758,6 +3773,11 @@ PrefabInstance:
       objectReference: {fileID: 1929241575}
     - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
       propertyPath: knockUpMeterBar
       value: 
       objectReference: {fileID: 483665998}
@@ -3766,6 +3786,11 @@ PrefabInstance:
       propertyPath: knockUpMeterLine
       value: 
       objectReference: {fileID: 656035673}
+    - target: {fileID: 3838291539055575559, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3821,6 +3846,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4262009686599729842, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4332473907178473070, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: knockUpMeterBar
@@ -3831,11 +3861,41 @@ PrefabInstance:
       propertyPath: knockUpMeterLine
       value: 
       objectReference: {fileID: 656035673}
+    - target: {fileID: 4595555730683876825, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813596017289463836, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959722666435920, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5980780527154148393, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6214607620734656765, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: DeathMenu
       value: 
       objectReference: {fileID: 2079151750}
+    - target: {fileID: 6214607620734656765, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600147901022615494, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6676685007984708084, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: m_Camera
@@ -3846,10 +3906,30 @@ PrefabInstance:
       propertyPath: m_UIInputModule
       value: 
       objectReference: {fileID: 1148046997}
+    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7453227503112746693, guid: 2ff63c0ce87854071a4fda07288f1ef2,
         type: 3}
       propertyPath: damage
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 7484201702324966146, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8915036250698566432, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: isUnlocked
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -4264,8 +4344,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.075399, y: 11.1329, z: 0}
-    m_Extent: {x: 1.9868999, y: 6.5765996, z: 0}
+    m_Center: {x: -9.0775, y: 11.1344, z: 0}
+    m_Extent: {x: 1.9964001, y: 6.5834, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4379,8 +4459,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.12455, y: 10.351049, z: 0}
-    m_Extent: {x: 1.9976499, y: 5.7894497, z: 0}
+    m_Center: {x: -9.12155, y: 10.344049, z: 0}
+    m_Extent: {x: 1.9910502, y: 5.78935, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4430,8 +4510,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.03495, y: 10.2867, z: 0}
-    m_Extent: {x: 2.0820498, y: 5.7886, z: 0}
+    m_Center: {x: -9.0374, y: 10.29175, z: 0}
+    m_Extent: {x: 2.0795002, y: 5.78895, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
@@ -4501,8 +4581,8 @@ MonoBehaviour:
   m_ShadowVolumeIntensityEnabled: 0
   m_ShadowVolumeIntensity: 0.75
   m_LocalBounds:
-    m_Center: {x: -9.07655, y: 11.1313505, z: 0}
-    m_Extent: {x: 1.99645, y: 6.58125, z: 0}
+    m_Center: {x: -9.07555, y: 11.1357, z: 0}
+    m_Extent: {x: 1.99945, y: 6.574, z: 0}
   m_PointLightInnerAngle: 0
   m_PointLightOuterAngle: 86.616516
   m_PointLightInnerRadius: 0
