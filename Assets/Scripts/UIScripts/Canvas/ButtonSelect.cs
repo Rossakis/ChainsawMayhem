@@ -15,5 +15,13 @@ namespace ChainsawMan
         {
             firstButtonToBeSelected.Select();
         }
+
+        /// <summary>
+        /// Select a button
+        /// </summary>
+        public void SelectButton()
+        {
+            firstButtonToBeSelected.Select();
+        }
     }
 }

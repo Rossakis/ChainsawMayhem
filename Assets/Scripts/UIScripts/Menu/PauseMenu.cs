@@ -1,16 +1,20 @@
-﻿using ChainsawMan.PlayerClass;
+﻿using ChainsawMan;
+using ChainsawMan.PlayerClass;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
+    [Tooltip("The gamepad button that will be first selected when opening the Pause Menu. Mainly used for gamepad support with the UI")]
+    [SerializeField] private Button firstButtonToBeSelected;
     [SerializeField] private GameObject pauseMenu;
-    [SerializeField] private Button firstButtonToBeSelected;//the first button to be selected when Death Screen is activated (for controller support)
     [SerializeField] private PlayerController playerController;//deactivate the playerController script when the game is paused, so that player doesn't move
     
     private bool isPaused;
+    private bool selectedButton;//if gamepadFirstSelectedButton was already selected
 
-    private void Start()
+    private void Awake()
     {
         pauseMenu.SetActive(false);
     }
@@ -28,11 +32,47 @@ public class PauseMenu : MonoBehaviour
                 PauseGame();
             }
         }
+
+        //if not paused, hide cursor (regardless if using keyboard or gamepad)
+        if (!isPaused)
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+            
+            //reset gamepad button
+            selectedButton = false;
+        }
+        else//if paused
+        {
+            if (Gamepad.current == null)//show cursor when using keyboard
+            {
+                Cursor.lockState = CursorLockMode.Confined;
+                Cursor.visible = true;
+            }
+            else//hide it when using gamepad
+            {
+                if (!selectedButton)//if gamepad button wasn't selected before, select it now
+                {
+                    firstButtonToBeSelected.Select();
+                    selectedButton = true;
+                }
+                
+                Cursor.lockState = CursorLockMode.Locked;
+                Cursor.visible = false;
+            }
+        }
     }
 
     private void PauseGame()
     {
-        pauseMenu.SetActive(true);
+        //if no gamepads are connected, show cursor
+        if (Gamepad.current == null) 
+        {
+            Cursor.lockState = CursorLockMode.Confined;
+            Cursor.visible = true;
+        }
+        
+        pauseMenu.SetActive(true);//show the pauseMenu panel
         playerController.enabled = false;//deactivate player controller
         Time.timeScale = 0f;//pause time
 

@@ -56,7 +56,7 @@ namespace ChainsawMan.PlayerClass
         {
             PlayerInput.actions.Disable();
         }
-
+        
         #region Input Public Access Methods
         
         /// <summary>
