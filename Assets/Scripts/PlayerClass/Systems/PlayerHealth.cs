@@ -26,7 +26,7 @@ namespace ChainsawMan
             else
                 currentHP -= dmg;
             
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerHit);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerHit);
             ShowDamage();
         }
 
@@ -55,7 +55,7 @@ namespace ChainsawMan
                 currentHP = maxHealth;
             }
 
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerRegeneration);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerRegeneration);
             //ParticleEffectsManager.Instance.Play(ParticleEffectsManager.ParticleNames.PlayerHeal, transform);
             AnimatedEffectsManager.Instance.Play(AnimatedEffectsManager.Effects.Heal, transform.position);
             ShowRegeneration();

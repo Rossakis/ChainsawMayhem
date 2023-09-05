@@ -66,13 +66,13 @@ namespace ChainsawMan
                 
                 knockUpMeterBar.SetActive(false);
                 knockUpMeterLine.fillAmount = 0;//reset the meter
-                SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackThree);
+                SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackThree);
 
             }
             else if(InputManager.instance.GetKnockUpRelease())
             {
                 player.animator.Play(attackHash);
-                SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackTwo);
+                SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackTwo);
 
             }
 
@@ -98,7 +98,7 @@ namespace ChainsawMan
             if (other.CompareTag("Enemy") && player.GetCurrentState() == player.KnockUpAttack)
             {
                 other.GetComponent<IDamage>().ApplyDamage(damage);
-                other.GetComponent<EnemyBehaviour>().KnockUp(currentHeight);
+                other.GetComponent<EnemyBehaviour>().KnockUp(currentHeight, cameraShake);
             }
         }
     }

@@ -15,7 +15,7 @@ namespace ChainsawMan.PlayerClass.States.Airborne.Combat
             NumberOfAttacks = 1;
             lastAttackTime = Time.time;
             player.animator.Play(attackHash);
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackOne);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackOne);
 
             player.characterController.Velocity = Vector2.zero;
 
@@ -60,8 +60,12 @@ namespace ChainsawMan.PlayerClass.States.Airborne.Combat
         {
             if (other.CompareTag("Enemy") && player.GetCurrentState() == player.AerialAttackOne)//if it's the first (aerial) attack against the enemy, do damage
             {
-                if(!other.GetComponent<EnemyBehaviour>().IsGrounded())//only apply aerial attack knock up if enemy is not grounded
+                if (!other.GetComponent<EnemyBehaviour>()
+                        .IsGrounded()) //only apply aerial attack knock up if enemy is not grounded
+                {
                     other.GetComponent<Rigidbody2D>().velocity = Vector2.down * fallingSpeed;
+                    other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange, cameraShake);//add knockBack purely for the applied camera effect
+                }
             }
         }
     }

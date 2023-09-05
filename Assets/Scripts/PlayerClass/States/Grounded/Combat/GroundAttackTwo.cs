@@ -15,7 +15,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             NumberOfAttacks = 2;
             lastAttackTime = Time.time;
             player.animator.Play(attackHash);
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackTwo);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackTwo);
 
         }
 
@@ -47,7 +47,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             if (other.CompareTag("Enemy") &&  player.GetCurrentState() == player.GroundAttackTwo)
             {
                 other.GetComponent<IDamage>().ApplyDamage(damage);
-                other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange);
+                other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange, cameraShake);
 
             }
         }

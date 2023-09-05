@@ -18,7 +18,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             NumberOfAttacks = 1;
             lastAttackTime = Time.time;
             player.animator.Play(attackHash);
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackOne);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackOne);
 
         }
 
@@ -53,6 +53,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             if (other.CompareTag("Enemy") &&  player.GetCurrentState() == player.WalkingGroundAttackOne)//if the first attack against the enemy, do damage
             {
                 other.GetComponent<IDamage>().ApplyDamage(damage);
+                other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange, cameraShake);//add knockBack purely for the applied camera effect
             }
         }
     }

@@ -29,7 +29,7 @@ namespace ChainsawMan.PlayerClass.States
             }
             
             player.animator.Play(dashHash);
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerDash);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerDash);
 
             player.characterController.Dash(dashForce);
             lastDashedTime = Time.time;

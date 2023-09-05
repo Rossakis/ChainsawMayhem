@@ -17,6 +17,10 @@ namespace ChainsawMan.PlayerClass.States.Grounded
         
         [Tooltip("The amount of range the enemy will knocked back by this attack.")]
         [SerializeField] protected float knockBackRange;
+        
+        [Tooltip("How much this attack will shake the camera.")]
+        [Range(0, 10)]
+        [SerializeField] protected float cameraShake;
 
         [SerializeField] protected float damage;
         

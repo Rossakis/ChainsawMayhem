@@ -52,27 +52,29 @@ namespace ChainsawMan
             audioSource = GetComponent<AudioSource>();
         }
 
-        public void PlayerSound(PlayerSounds sounds)
+        public void PlayerSound(GameObject player, PlayerSounds sounds)
         {
+            var playerAudio = player.gameObject.GetComponentInParent<AudioSource>();
+            
             switch (sounds)
             {
                 case PlayerSounds.PlayerAttackOne:
-                    audioSource.PlayOneShot(playerAttackOne);
+                    playerAudio.PlayOneShot(playerAttackOne);
                     break;
                 case PlayerSounds.PlayerAttackTwo:
-                    audioSource.PlayOneShot(playerAttackTwo);
+                    playerAudio.PlayOneShot(playerAttackTwo);
                     break;
                 case PlayerSounds.PlayerAttackThree:
-                    audioSource.PlayOneShot(playerAttackThree);
+                    playerAudio.PlayOneShot(playerAttackThree);
                     break;
                 case PlayerSounds.PlayerDash:
-                    audioSource.PlayOneShot(playerDash);
+                    playerAudio.PlayOneShot(playerDash);
                     break;
                 case PlayerSounds.PlayerHit:
-                    audioSource.PlayOneShot(playerHit);
+                    playerAudio.PlayOneShot(playerHit);
                     break;
                 case PlayerSounds.PlayerRegeneration:
-                    audioSource.PlayOneShot(playerRegeneration);
+                    playerAudio.PlayOneShot(playerRegeneration);
                     break;
             }
         }

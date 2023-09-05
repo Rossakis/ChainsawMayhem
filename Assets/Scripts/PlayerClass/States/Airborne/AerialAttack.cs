@@ -17,8 +17,17 @@ namespace ChainsawMan.PlayerClass.States.Airborne.Combat
         
         [Tooltip("The speed at which the player will fall once attacking. Positive numbers mean he will fall faster, zero means he will fall normally, negative numbers will uphold him in the air.")]
         [SerializeField] protected float fallingSpeed;
+        
         [Tooltip("The speed at which the enemy will fall once being attacked in the air. Positive numbers mean he will fall faster, zero means he will fall normally, negative numbers will uphold him in the air.")]
         [SerializeField] protected float enemyFallingSpeed;
+
+        [Tooltip("The amount of range the enemy will knocked back by this attack.")]
+        [SerializeField] protected float knockBackRange;
+        
+        [Tooltip("How much this attack will shake the camera.")]
+        [Range(0, 10)]
+        [SerializeField] protected float cameraShake;
+        
         [SerializeField] protected float damage;
 
         //Animation referencing and name hashing

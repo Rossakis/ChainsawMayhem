@@ -226,14 +226,15 @@ namespace ChainsawMan
             return isGrounded;
         }
 
-        /// <summary>
-        /// KnockBack the enemy for a certain amount
-        /// </summary>
-        /// <param name="knockBackForce"></param>
-        public void KnockBack(float knockBackForce)
+       /// <summary>
+       /// KnockBack the enemy for a certain amount and apply a certain amount of camera shake
+       /// </summary>
+       /// <param name="knockBackForce"></param>
+       /// <param name="cameraShake">The value should be from 0 to 10, with 1 being zero camera shake</param>
+        public void KnockBack(float knockBackForce, float cameraShake)
         {
             //Shake the camera
-            CinemachineShaker.Instance.ShakeCamera(knockBackForce/175f, 0.1f);//shake camera depending on how much knockBack Force the enemy receives
+            CinemachineShaker.Instance.ShakeCamera(cameraShake, 0.1f);//shake the camera
             
             rb.velocity = Vector2.zero;//if enemy was being pushed back before, make his velocity zero
 
@@ -243,13 +244,14 @@ namespace ChainsawMan
                 rb.AddForce(Vector2.right * knockBackForce, ForceMode2D.Force);//knock back to the right
         }
         
-        /// <summary>
-        /// KnockUp the enemy for a certain amount
-        /// </summary>
-        /// <param name="knockBackForce"></param>
-        public void KnockUp(float knockUpForce)
+       /// <summary>
+       /// KnockUp the enemy for a certain amount and shake the camera for a certain amount
+       /// </summary>
+       /// <param name="knockUpForce"></param>
+       /// <param name="cameraShake"></param>
+        public void KnockUp(float knockUpForce, float cameraShake)
         {
-            CinemachineShaker.Instance.ShakeCamera(knockUpForce / 500f, 0.1f);//shake camera depending on how much knockUp Force the enemy receives
+            CinemachineShaker.Instance.ShakeCamera(cameraShake, 0.1f);//shake camera depending on how much knockUp Force the enemy receives
             
             rb.velocity = Vector2.zero;//if enemy was falling, before knocking him up again, make his velocity zero
             rb.AddForce(Vector2.up * knockUpForce, ForceMode2D.Force);//knock back to the left

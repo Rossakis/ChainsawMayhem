@@ -17,7 +17,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             NumberOfAttacks = 2;
             lastAttackTime = Time.time;
             player.animator.Play(attackHash);
-            SoundManager.Instance.PlayerSound(SoundManager.PlayerSounds.PlayerAttackTwo);
+            SoundManager.Instance.PlayerSound(gameObject, SoundManager.PlayerSounds.PlayerAttackTwo);
 
         }
 
@@ -33,12 +33,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             {
                 NumberOfAttacks = 1;
             }
-            
-            // if(NumberOfAttacks == 1 && player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
-            // {
-            //     player.ChangeState(player.WalkingGroundAttackOne);
-            // }
-            
+
             //Oce the animation ends, go back to Falling
             if(player.animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1f)
             {
@@ -52,6 +47,7 @@ namespace ChainsawMan.PlayerClass.States.Grounded
             if (other.CompareTag("Enemy") &&  player.GetCurrentState() == player.WalkingGroundAttackTwo)
             {
                 other.GetComponent<IDamage>().ApplyDamage(damage);
+                other.GetComponent<EnemyBehaviour>().KnockBack(knockBackRange, cameraShake);//add knockBack purely for the applied camera effect
             }
         }
     }

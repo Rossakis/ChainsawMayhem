@@ -1,0 +1,180 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &3545465601287790085
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1001147555512816710, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1001147555512816710, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2356131926670396117, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -183.08998
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986311, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4086499135452986363, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: m_Name
+      value: Player - Locked Abilities
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262009686599729842, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4262009686599729842, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595555730683876825, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595555730683876825, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813596017289463836, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4813596017289463836, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959722666435920, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5507959722666435920, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600147901022615494, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6600147901022615494, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: knockBackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 6804740029594884635, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: damage
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: moveSpeed
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: cameraShake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: knockBackRange
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144524284797885891, guid: 2ff63c0ce87854071a4fda07288f1ef2,
+        type: 3}
+      propertyPath: attackWindowTime
+      value: 0.4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2ff63c0ce87854071a4fda07288f1ef2, type: 3}

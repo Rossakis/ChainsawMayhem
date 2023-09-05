@@ -9,9 +9,11 @@ namespace ChainsawMan
     /// </summary>
     public class PlatformPhasingDown : MonoBehaviour
     {
-        [SerializeField] private BoxCollider2D[] playerCollider;//all of the player's colliders (non-trigger) that we will disable/enable when phasing
+        [Tooltip("All of the player's colliders (non-trigger) that we will disable/enable when phasing")]
+        [SerializeField] private BoxCollider2D[] playerCollider;
         
         private GameObject currentOneWayPlatform;//the platform we're about to phase through
+        
         private void Update()
         {
             if (InputManager.instance.GetCrouch())
