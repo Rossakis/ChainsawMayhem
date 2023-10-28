@@ -89,6 +89,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Mouse Input"",
+                    ""type"": ""Value"",
+                    ""id"": ""cf491373-e7cd-43cf-a295-45a6165c19d0"",
+                    ""expectedControlType"": ""Axis"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
                 }
             ],
             ""bindings"": [
@@ -386,6 +395,17 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""groups"": ""Keyboard&Mouse"",
                     ""action"": ""KnockUp"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3a1a0a61-faae-476a-a45b-4867a1938a78"",
+                    ""path"": ""<Mouse>/delta"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": ""Keyboard&Mouse"",
+                    ""action"": ""Mouse Input"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -770,6 +790,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         m_Player_Dash = m_Player.FindAction("Dash", throwIfNotFound: true);
         m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
         m_Player_KnockUp = m_Player.FindAction("KnockUp", throwIfNotFound: true);
+        m_Player_MouseInput = m_Player.FindAction("Mouse Input", throwIfNotFound: true);
         // UI
         m_UI = asset.FindActionMap("UI", throwIfNotFound: true);
         m_UI_Navigate = m_UI.FindAction("Navigate", throwIfNotFound: true);
@@ -845,6 +866,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     private readonly InputAction m_Player_Dash;
     private readonly InputAction m_Player_Crouch;
     private readonly InputAction m_Player_KnockUp;
+    private readonly InputAction m_Player_MouseInput;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -856,6 +878,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         public InputAction @Dash => m_Wrapper.m_Player_Dash;
         public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
         public InputAction @KnockUp => m_Wrapper.m_Player_KnockUp;
+        public InputAction @MouseInput => m_Wrapper.m_Player_MouseInput;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -886,6 +909,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @KnockUp.started += instance.OnKnockUp;
             @KnockUp.performed += instance.OnKnockUp;
             @KnockUp.canceled += instance.OnKnockUp;
+            @MouseInput.started += instance.OnMouseInput;
+            @MouseInput.performed += instance.OnMouseInput;
+            @MouseInput.canceled += instance.OnMouseInput;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
@@ -911,6 +937,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @KnockUp.started -= instance.OnKnockUp;
             @KnockUp.performed -= instance.OnKnockUp;
             @KnockUp.canceled -= instance.OnKnockUp;
+            @MouseInput.started -= instance.OnMouseInput;
+            @MouseInput.performed -= instance.OnMouseInput;
+            @MouseInput.canceled -= instance.OnMouseInput;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -1033,6 +1062,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         void OnDash(InputAction.CallbackContext context);
         void OnCrouch(InputAction.CallbackContext context);
         void OnKnockUp(InputAction.CallbackContext context);
+        void OnMouseInput(InputAction.CallbackContext context);
     }
     public interface IUIActions
     {

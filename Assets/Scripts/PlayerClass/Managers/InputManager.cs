@@ -23,6 +23,7 @@ namespace ChainsawMan.PlayerClass
 
         //Input Actions - UI
         private InputAction pauseAction;
+        private InputAction mouseAnyAction;//mouse was moved in any capacity
         
         private bool wasAttackPressed;
         
@@ -42,13 +43,17 @@ namespace ChainsawMan.PlayerClass
         {
             PlayerInput.actions.Enable();
             
+            //Gameplay
             moveAction = PlayerInput.actions.FindAction("Move");
             attackAction = PlayerInput.actions.FindAction("Attack");
-            knockupAction = PlayerInput.actions.FindAction("KnockUp");
+            knockupAction = PlayerInput.actions.FindAction("Knock Up");
             jumpAction = PlayerInput.actions.FindAction("Jump");
             dashAction = PlayerInput.actions.FindAction("Dash");
-            pauseAction = PlayerInput.actions.FindAction("Pause");
             crouchAction = PlayerInput.actions.FindAction("Crouch");
+            
+            //UI
+            pauseAction = PlayerInput.actions.FindAction("Pause");
+            mouseAnyAction = PlayerInput.actions.FindAction("Mouse Input");
 
         }
 
@@ -57,8 +62,8 @@ namespace ChainsawMan.PlayerClass
             PlayerInput.actions.Disable();
         }
         
-        #region Input Public Access Methods
-        
+        #region Public Access Methods - Gameplay
+
         /// <summary>
         /// Get the player's horizontal movement input (-1, 1)
         /// </summary>
@@ -115,15 +120,6 @@ namespace ChainsawMan.PlayerClass
         }
 
         /// <summary>
-        /// Return true if player pressed pause button
-        /// </summary>
-        /// <returns></returns>
-        public bool GetPause()
-        {
-            return pauseAction.WasPerformedThisFrame();
-        }
-
-        /// <summary>
         /// Return true if player pressed dash button only once
         /// </summary>
         /// <returns></returns>
@@ -139,6 +135,28 @@ namespace ChainsawMan.PlayerClass
         public bool GetCrouch()
         {
             return crouchAction.WasPerformedThisFrame();
+        }
+        
+        #endregion
+        
+        #region Public Access Methods - UI
+        
+        /// <summary>
+        /// Return true if player pressed pause button
+        /// </summary>
+        /// <returns></returns>
+        public bool GetPause()
+        {
+            return pauseAction.WasPerformedThisFrame();
+        }
+        
+        /// <summary>
+        /// See if player has made any mouse input on X and Y axes
+        /// </summary>
+        /// <returns></returns>
+        public Vector2 GetMouseAny()//player's horizontal movement 
+        {
+            return mouseAnyAction.ReadValue<Vector2>();
         }
         
         #endregion

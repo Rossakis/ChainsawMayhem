@@ -60,13 +60,22 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "KnockUp",
+                    "name": "Knock Up",
                     "type": "Button",
                     "id": "6c4056e5-d2ee-463a-a94f-d5fdc30aff69",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "Mouse Input",
+                    "type": "Value",
+                    "id": "cf491373-e7cd-43cf-a295-45a6165c19d0",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -341,7 +350,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "KnockUp",
+                    "action": "Knock Up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -352,7 +361,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Gamepad",
-                    "action": "KnockUp",
+                    "action": "Knock Up",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -363,7 +372,18 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
-                    "action": "KnockUp",
+                    "action": "Knock Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3a1a0a61-faae-476a-a45b-4867a1938a78",
+                    "path": "<Mouse>/delta",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "Keyboard&Mouse",
+                    "action": "Mouse Input",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
