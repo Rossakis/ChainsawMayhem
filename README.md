@@ -1,7 +1,7 @@
 # ChainsawMayhem
 
 ## About this project ##
-Chainsaw Mayhem is a 2D action side scroller (Unity) game, that entails the story of Chainsaw Man, Tastuki Fujimoto's manga, retold through a sequence of pixel-styled bosses in the chronological order of the series.
+Chainsaw Mayhem is a 2D action side scroller (Unity) game, that retells the story of Chainsaw Man, Tastuki Fujimoto's manga, through a sequence of pixel-art styled bosses in the chronological order of the series.
 It is made purely as a tribute to the highly acclaimed series and seeks to bring the joy of interacting with its world to the fans.
 
 *Currently, it's at the start of its development, and will undergo many changes in the near future, so stay tuned*
