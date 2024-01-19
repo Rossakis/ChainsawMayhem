@@ -52,6 +52,8 @@ namespace ChainsawMan
         {
             //Find the player's transform component by the Player tag
             player = GameObject.FindWithTag("Player").transform;
+            if (player == null)
+                player = GameObject.Find("Player").transform;
             
             edgeDetection = GetComponent<GroundCheck>();
             rb = GetComponent<Rigidbody2D>();
