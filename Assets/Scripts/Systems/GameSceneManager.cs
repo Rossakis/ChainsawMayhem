@@ -6,19 +6,6 @@ namespace ChainsawMan
 {
     public class GameSceneManager : MonoBehaviour
     {
-        public static GameSceneManager Instance { get; private set; }
-        private void Awake()
-        {
-            if (Instance != null)
-            {
-                Destroy(this);
-                return;
-            }
-            
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-        }
-        
         private void Start()
         {
             if(GameStateManager.Instance.State == GameStates.None)//Start of the game
@@ -54,7 +41,7 @@ namespace ChainsawMan
         public void ExitToMainMenu()
         {
             GameStateManager.Instance.SwitchState(GameStates.SplashScreen);
-            
+
             //if no gamepads are connected, show cursor
             if (Gamepad.current == null) 
             {
